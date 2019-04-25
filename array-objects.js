@@ -1,11 +1,19 @@
-function arrayToObjects(array)
+//David Nagy
+//4/22/19
+//array-objects.js
+//implementing an Array to Objects
+
+
+
+//Creating a function/ array
+function arrayObjects(array)
 {
     let result = {
         strings: [],
         numbers: [],
         booleans: []
     };
-
+//Array looping
     let i;
     for (i = 0; i < array.length; i++)
     {
@@ -25,7 +33,7 @@ function arrayToObjects(array)
 
     return result;
 }
-
+//Creating a Objecttopage function
 function objectToPage(objectName, docObject)
 {
     let j;
@@ -88,28 +96,28 @@ function objectToPage(objectName, docObject)
     }
 }
 
-let array1 = ['dog', 12, true, 'apple', 432, 'grapes'];
-let object1 = arrayToObjects(array1);
+let array1 = ['dog', 12, true, 'strawberry', 432, 'apple'];
+let object1 = arrayObjects(array1);
 
-let array2 = ['dog', 'cat', 'fish'];
-let object2 = arrayToObjects(array2);
+let array2 = ['dog', 'cat', 'bird'];
+let object2 = arrayObjects(array2);
 
 let array3 = [12, 23, 123, 3234, 123];
-let object3 = arrayToObjects(array3);
+let object3 = arrayObjects(array3);
 
 let i;
 for(i = 0; i < 3; i++)
 {
     if(i === 0)
     {
-        objectToPage(object1, "obj1List");
+        objectToPage(object1, "obj1");
     }
     else if(i === 1)
     {
-        objectToPage(object2, "obj2List");
+        objectToPage(object2, "obj2");
     }
     else
     {
-        objectToPage(object3, "obj3List");
+        objectToPage(object3, "obj3");
     }
 }
